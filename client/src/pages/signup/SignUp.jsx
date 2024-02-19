@@ -1,5 +1,6 @@
 import React from "react";
 import GenderCheckBox from "./GenderCheckBox";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
@@ -55,12 +56,12 @@ const SignUp = () => {
           {/* grnder check box goes here  */}
           <GenderCheckBox />
 
-          <a
-            href=""
-            className=" text-gray-200 text-sm hover:underline hover:text-blue-600 mt-2 inline-block"
+          <Link
+            to="/login"
+            clLinkssName=" text-gray-200  text-sm  mt-2 inline-block"
           >
             Already have and an account?
-          </a>
+          </Link>
           <div>
             <button className=" btn btn-block btn-sm mt-2 bg-zinc-300 hover:bg-[#66aae2] hover:text-white border-none text-[#3297ea]">
               Sign Up
