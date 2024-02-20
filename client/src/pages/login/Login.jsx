@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [passwors, setPassword] = useState("");
   return (
     <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
       <div className="w-full p-6 rounded-lg shadow-lg bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
@@ -16,7 +18,9 @@ const Login = () => {
             </label>
             <input
               type="text"
+              value={username}
               placeholder="Enter username"
+              onChange={(e) => setUsername(e.target.value)}
               className="w-full bg-zinc-300 placeholder:text-gray-500 text-gray-900 input input-bordered h-10"
             />
           </div>
